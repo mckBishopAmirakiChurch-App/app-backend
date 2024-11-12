@@ -4442,9 +4442,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/churchBackend/church Backend.csproj",
-      "projectName": "church Backend",
-      "projectPath": "/workspaces/churchBackend/church Backend.csproj",
+      "projectUniqueName": "/workspaces/churchBackend/churchBackend.csproj",
+      "projectName": "churchBackend",
+      "projectPath": "/workspaces/churchBackend/churchBackend.csproj",
       "packagesPath": "/root/.nuget/packages/",
       "outputPath": "/workspaces/churchBackend/obj/",
       "projectStyle": "PackageReference",

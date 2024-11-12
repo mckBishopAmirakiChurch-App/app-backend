@@ -1,7 +1,7 @@
-using   Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using ChurchAppBibleAPI.Models;
 
-namespace ChurchAppBibleAPI.DataAnnotations
+namespace ChurchAppBibleAPI.Data
 {
     public class BibleContext : DbContext
     {
@@ -13,14 +13,12 @@ namespace ChurchAppBibleAPI.DataAnnotations
         public DbSet<Chapter> Chapters { get; set; }
         public DbSet<Verse> Verses { get; set; }
 
-
-        protected override void onModelCreating (ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)  // Fixed capitalization here
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Book>().ToTable("Books");
             modelBuilder.Entity<Chapter>().ToTable("Chapters");
             modelBuilder.Entity<Verse>().ToTable("Verses");
-            
         }
     }
 }

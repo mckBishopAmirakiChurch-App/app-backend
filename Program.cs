@@ -1,17 +1,38 @@
+// Program.cs
+using ChurchAppBibleAPI.Data;
+using ChurchAppBibleAPI.Repositories;
+using ChurchAppBibleAPI.Services;
+using ChurchAppBibleAPI.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
-
-//configure the azure sql database
-app.Services.AddDbContext<BibleContext>(options =>
+// Register DbContext with SQL Server and retry logic
+builder.Services.AddDbContext<BibleContext>(options =>
 {
-    options.UseSqlServer(app.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+        sqlServerOptionsAction: sqlOptions =>
+        {
+            sqlOptions.EnableRetryOnFailure(
+                maxRetryCount: 5,
+                maxRetryDelay: TimeSpan.FromSeconds(30),
+                errorNumbersToAdd: null
+            );
+            // Add command timeout
+            sqlOptions.CommandTimeout(30);
+        });
 });
+
+// Register repositories and services for Dependency Injection
+builder.Services.AddScoped<IBibleRepository, BibleRepository>();
+builder.Services.AddScoped<IBibleService, BibleService>();
+
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -21,10 +42,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
 
-
-
-
+// Add error handling middleware
+app.UseExceptionHandler("/error");
 
 app.Run();
-

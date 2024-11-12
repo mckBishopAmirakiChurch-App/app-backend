@@ -8,7 +8,7 @@ namespace ChurchAppBibleAPI.Repositories
     {
         Task<IEnumerable<Book>> GetAllBooksAsync();
         Task<Book> GetBookByNameAsync(string name);
-
         Task<IEnumerable<Chapter>> GetChaptersByBookAsync(string bookName);
-        Task<Verse> GetVerserAsync(string bookName, int chapterNumber, int verseNumber);
+        Task<Verse> GetVerseAsync(string bookName, int chapterNumber, int verseNumber);
+    }
 }
