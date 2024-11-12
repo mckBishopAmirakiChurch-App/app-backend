@@ -1,0 +1,66 @@
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/bin/Debug/net8.0/appsettings.Development.json
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/bin/Debug/net8.0/appsettings.json
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/bin/Debug/net8.0/church Backend.exe
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/bin/Debug/net8.0/church Backend.deps.json
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/bin/Debug/net8.0/church Backend.runtimeconfig.json
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/bin/Debug/net8.0/church Backend.dll
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/bin/Debug/net8.0/church Backend.pdb
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/bin/Debug/net8.0/Microsoft.OpenApi.dll
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/church Backend.csproj.AssemblyReference.cache
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/church Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/church Backend.AssemblyInfoInputs.cache
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/church Backend.AssemblyInfo.cs
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/church Backend.csproj.CoreCompileInputs.cache
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/church Backend.MvcApplicationPartsAssemblyInfo.cs
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/church Backend.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/staticwebassets.build.json
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/staticwebassets.development.json
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/staticwebassets/msbuild.church Backend.Microsoft.AspNetCore.StaticWebAssets.props
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/staticwebassets/msbuild.build.church Backend.props
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.church Backend.props
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.church Backend.props
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/staticwebassets.pack.json
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/scopedcss/bundle/church Backend.styles.css
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/church B.71C1E264.Up2Date
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/church Backend.dll
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/refint/church Backend.dll
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/church Backend.pdb
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/church Backend.genruntimeconfig.cache
+C:/Users/DevopsVm/Documents/church Backend/churchBackend/obj/Debug/net8.0/ref/church Backend.dll
+/workspaces/churchBackend/bin/Debug/net8.0/appsettings.Development.json
+/workspaces/churchBackend/bin/Debug/net8.0/appsettings.json
+/workspaces/churchBackend/bin/Debug/net8.0/church Backend
+/workspaces/churchBackend/bin/Debug/net8.0/church Backend.deps.json
+/workspaces/churchBackend/bin/Debug/net8.0/church Backend.runtimeconfig.json
+/workspaces/churchBackend/bin/Debug/net8.0/church Backend.dll
+/workspaces/churchBackend/bin/Debug/net8.0/church Backend.pdb
+/workspaces/churchBackend/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/workspaces/churchBackend/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/workspaces/churchBackend/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/workspaces/churchBackend/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/workspaces/churchBackend/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/workspaces/churchBackend/obj/Debug/net8.0/church Backend.csproj.AssemblyReference.cache
+/workspaces/churchBackend/obj/Debug/net8.0/church Backend.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/churchBackend/obj/Debug/net8.0/church Backend.AssemblyInfoInputs.cache
+/workspaces/churchBackend/obj/Debug/net8.0/church Backend.AssemblyInfo.cs
+/workspaces/churchBackend/obj/Debug/net8.0/church Backend.csproj.CoreCompileInputs.cache
+/workspaces/churchBackend/obj/Debug/net8.0/church Backend.MvcApplicationPartsAssemblyInfo.cs
+/workspaces/churchBackend/obj/Debug/net8.0/church Backend.MvcApplicationPartsAssemblyInfo.cache
+/workspaces/churchBackend/obj/Debug/net8.0/staticwebassets.build.json
+/workspaces/churchBackend/obj/Debug/net8.0/staticwebassets.development.json
+/workspaces/churchBackend/obj/Debug/net8.0/staticwebassets/msbuild.church Backend.Microsoft.AspNetCore.StaticWebAssets.props
+/workspaces/churchBackend/obj/Debug/net8.0/staticwebassets/msbuild.build.church Backend.props
+/workspaces/churchBackend/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.church Backend.props
+/workspaces/churchBackend/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.church Backend.props
+/workspaces/churchBackend/obj/Debug/net8.0/staticwebassets.pack.json
+/workspaces/churchBackend/obj/Debug/net8.0/scopedcss/bundle/church Backend.styles.css
+/workspaces/churchBackend/obj/Debug/net8.0/church B.71C1E264.Up2Date
+/workspaces/churchBackend/obj/Debug/net8.0/church Backend.dll
+/workspaces/churchBackend/obj/Debug/net8.0/refint/church Backend.dll
+/workspaces/churchBackend/obj/Debug/net8.0/church Backend.pdb
+/workspaces/churchBackend/obj/Debug/net8.0/church Backend.genruntimeconfig.cache
+/workspaces/churchBackend/obj/Debug/net8.0/ref/church Backend.dll

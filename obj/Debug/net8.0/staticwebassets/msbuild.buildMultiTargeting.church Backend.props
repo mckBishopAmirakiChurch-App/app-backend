@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/church Backend.props" />
+</Project>
