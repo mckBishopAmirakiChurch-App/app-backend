@@ -1,36 +1,83 @@
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+using System;
+using System.Net.Http;
 using System.Threading.Tasks;
-using ChurchAppBibleAPI.Models;
-using ChurchAppBibleAPI.Services.Interfaces;
+using Newtonsoft.Json;
+using System.Text.Json;
+using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
-namespace ChurchAppBibleAPI.Controllers
+
+public class BibleVerseService
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class BibleController : ControllerBase
-    {
-        private readonly IBibleService _bibleService;
+    private readonly HttpClient _client;
+    private const string RapidApiKey = "21871ac1c2msha17cca7bcfab529p1f0ad7jsn414c175d33ce";
+    private const string RapidApiHost = "niv-bible.p.rapidapi.com";
 
-        public BibleController(IBibleService bibleService)
+
+
+    public BibleVerseService(HttpClient httpClient)
+    {
+        _client = httpClient;
+        _client.DefaultRequestHeaders.Add("X-RapidAPI-Key", RapidApiKey);
+        _client.DefaultRequestHeaders.Add("X-RapidAPI-Host", RapidApiHost);
+    }
+
+
+    public async Task<string> GetBibleVerseAsync(string book, int chapter, int? verse = null)
+    {
+        //contruct url based on the parameters=
+        string url = verse.HasValue ?
+         $"https://niv-bible.p.rapidapi.com/row?Book={Uri.EscapeDataString(book)}&Chapter={chapter}&Verse={verse.Value}"
+        : $"https://niv-bible.p.rapidapi.com/row?Book={Uri.EscapeDataString(book)}&Chapter={chapter}";
+        try
         {
-            _bibleService = bibleService;
+            var response = await _client.GetAsync(url);
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadAsStringAsync();
+
+        }
+        catch (HttpRequestException ex)
+        {
+            throw new Exception($"Error retrieeving nbible verse:  {ex.Message} ", ex);
         }
 
-        [HttpGet("books")]
-        public async Task<ActionResult<IEnumerable<Book>>> GetAllBooksAsync() =>
-            Ok(await _bibleService.GetAllBooksAsync());
-
-        [HttpGet("book/{name}")]
-        public async Task<ActionResult<Book>> GetBookByName(string name) =>
-            Ok(await _bibleService.GetBookByNameAsync(name));
-
-        [HttpGet("book/{bookName}/chapters")]
-        public async Task<ActionResult<IEnumerable<Chapter>>> GetChaptersByBook(string bookName) =>
-            Ok(await _bibleService.GetChaptersByBookAsync(bookName));  // Changed 'name' to 'bookName'
-
-        [HttpGet("book/{bookName}/chapter/{chapterNumber}/verse/{verseNumber}")]
-        public async Task<ActionResult<Verse>> GetVerse(string bookName, int chapterNumber, int verseNumber) =>
-            Ok(await _bibleService.GetVerseAsync(bookName, chapterNumber, verseNumber));
     }
+
+    // Overloaded method to get entire chapter
+    public async Task <string>GetBibleChapterAsync(string book, int chapter)
+    {
+        return await GetBibleVerseAsync(book, chapter);
+    }
+}
+
+//handle the controller and the routing of it
+public class BibleController : ControllerBase
+{
+    private readonly BibleVerseService _bibleVerseService;
+    public BibleController(BibleVerseService bibleVerseService)
+    {
+        _bibleService = bibleService;
+    }
+
+    [HttpGet("verse")]
+    public async Task <IActionResult> GetVerse(
+        [FromQuery] string book,    
+        [FromQuery] int chapter,
+        [FromQuery] int? verse = null
+    )
+    {
+        var result =  await _bibleVerseService.GetBibleVerseAsync(book, chapter, verse);
+        return Ok(result);
+    }
+
+    [HttpGet("chapter")]
+    public async Task<IActionResult> GetChapter(
+        [FromQuery] string book,
+        [FromQuery] int chapter
+    )
+    {
+        var result = await _bibleVerseService.GetBibleChapterAsync(book, chapter);
+        return Ok(result);
+    }
+
 }
